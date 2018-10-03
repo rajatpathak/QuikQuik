@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SelectLocationActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colororange"
+        android:gravity="center"
+        android:text="Select Location"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/llorderstatus"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:id="@+id/llhome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivhome"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/tvhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0sp"
+            android:layout_height="1sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llorder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivorder"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cal"
+                android:alpha="0.4"
+                />
+
+            <TextView
+                android:id="@+id/tvorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date/Time"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0sp"
+            android:layout_height="1sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llchat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivchat"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cal"
+                android:alpha="0.4" />
+
+            <TextView
+                android:id="@+id/tvchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0sp"
+            android:layout_height="1sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llaccount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivaccount"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cal"
+                android:alpha="0.4" />
+
+            <TextView
+                android:id="@+id/tvaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complete"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#b7b7b7"
+        app:layout_constraintBottom_toTopOf="@+id/addres1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llorderstatus" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/markar"
+        app:layout_constraintBottom_toTopOf="@+id/addres1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llorderstatus"
+        />
+
+    <EditText
+        android:id="@+id/addres1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:layout_margin="10sp"
+        app:layout_constraintBottom_toTopOf="@id/addres2"
+        android:hint="Address line 1"
+        />
+    <EditText
+        android:id="@+id/addres2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:layout_margin="10sp"
+        app:layout_constraintBottom_toTopOf="@id/addtitle"
+        android:hint="Address line 2"
+        />
+    <EditText
+        android:id="@+id/addtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:layout_margin="10sp"
+        app:layout_constraintBottom_toTopOf="@id/tvcontinue"
+        android:hint="Address title - ie. home office etc."
+        />
+
+    <TextView
+        android:id="@+id/tvcontinue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colororange"
+        android:gravity="center"
+        android:text="Continue to Date/Time"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

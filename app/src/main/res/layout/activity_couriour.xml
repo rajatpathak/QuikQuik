@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".Activities.CouriourActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colororange"
+        android:gravity="center"
+        android:text="Courior"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_left"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="50sp"
+                android:text="From : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvpickup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/whiteround"
+                android:backgroundTint="@color/bgedit"
+                android:drawablePadding="10sp"
+                android:paddingStart="10sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Select Pickup"
+                android:gravity="center_vertical"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawableTint="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+            <EditText
+                android:id="@+id/etpiccontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/whiteround"
+                android:backgroundTint="@color/bgedit"
+                android:drawablePadding="42sp"
+                android:paddingStart="10sp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:hint="Contact Person"
+                android:drawableStart="@android:drawable/screen_background_light_transparent"
+                android:drawableTint="@color/bgedit"
+                android:drawableTintMode="src_atop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvpickup" />
+
+
+            <TextView
+                android:id="@+id/txtto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="20sp"
+                android:text="To : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etpiccontact" />
+
+
+            <TextView
+                android:id="@+id/tvdrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/whiteround"
+                android:backgroundTint="@color/bgedit"
+                android:drawablePadding="10sp"
+                android:paddingStart="10sp"
+                android:paddingTop="5dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:hint="Select Drop Location"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawableTint="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtto" />
+
+
+            <EditText
+                android:id="@+id/etdropcontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/whiteround"
+                android:backgroundTint="@color/bgedit"
+                android:drawablePadding="42sp"
+                android:paddingStart="10sp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:hint="Contact Person"
+                android:drawableStart="@android:drawable/screen_background_light_transparent"
+                android:drawableTint="@color/bgedit"
+                android:drawableTintMode="src_over"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvdrop" />
+
+
+
+            <TextView
+                android:id="@+id/txtitemtodeliver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="20sp"
+                android:text="Item to deliver"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etdropcontact" />
+
+
+            <ImageView
+                android:id="@+id/ivparcel"
+                android:layout_width="100dp"
+                android:layout_height="87dp"
+                android:layout_margin="20sp"
+                android:background="@drawable/outerblack"
+                android:src="@drawable/parcel"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtitemtodeliver" />
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/outerblack"
+                android:hint="Enter Item Details"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:padding="10dp"
+                android:maxLines="3"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivparcel"
+                app:layout_constraintTop_toBottomOf="@+id/txtitemtodeliver"/>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivparcel"
+                >
+
+                <TextView
+                    android:id="@+id/tvcontinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/yellow"
+                    android:gravity="center"
+                    android:padding="15sp"
+                    android:text="Next"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+            </android.support.v7.widget.CardView>
+
+
+            <View
+                android:id="@+id/cardView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView3"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

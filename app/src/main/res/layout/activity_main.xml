@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragmentview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llbottomview"
+        />
+
+    <LinearLayout
+        android:id="@+id/llbottomview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/llhome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivhome"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_home"
+                android:tint="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llorder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivorder"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_workout"
+                android:tint="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orders"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llchat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivchat"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_chat"
+                android:tint="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llaccount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivaccount"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_happy"
+                android:tint="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Account"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llsetting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivsetting"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvsetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

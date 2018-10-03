@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1e1e1"
+    tools:context=".Activities.SelectLocationActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colororange"
+        android:gravity="center"
+        android:text="Schedule"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/llorderstatus"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:id="@+id/llhome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivhome"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/tvhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textAlignment="center"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0sp"
+            android:layout_height="1sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/colororange"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llorder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivorder"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cal" />
+
+            <TextView
+                android:id="@+id/tvorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date/Time"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0sp"
+            android:layout_height="1sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llchat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivchat"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:src="@drawable/cal" />
+
+            <TextView
+                android:id="@+id/tvchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0sp"
+            android:layout_height="1sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llaccount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivaccount"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:src="@drawable/cal" />
+
+            <TextView
+                android:id="@+id/tvaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complete"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtselectdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:paddingStart="20sp"
+        android:text="Select Date"
+        android:textColor="@color/colororange"
+        app:layout_constraintTop_toBottomOf="@id/llorderstatus" />
+
+    <TextView
+        android:id="@+id/txtmonthyear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="5sp"
+        android:padding="10sp"
+        android:paddingStart="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/txtselectdate"
+        app:layout_constraintTop_toBottomOf="@id/llorderstatus" />
+
+
+    <devs.mulham.horizontalcalendar.HorizontalCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foregroundTint="@color/white"
+        android:outlineProvider="none"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:barrierAllowsGoneWidgets="false"
+        app:layout_constraintTop_toBottomOf="@id/txtselectdate"
+        app:selectedDateBackground="@drawable/outerorange"
+        app:textColorNormal="#bababa"
+        app:textColorSelected="@color/black" />
+
+    <TextView
+        android:id="@+id/txtselecttime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:paddingStart="20sp"
+        android:text="Select Date"
+        android:textColor="@color/colororange"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/txtselecttime">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/timeselector"
+                android:button="@null"
+                android:padding="10dp"
+                android:checked="true"
+                android:text="08:00 AM - 10:00 AM" />
+
+            <RadioButton
+                android:id="@+id/time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/timeselector"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="10:00 AM - 12:00 PM" />
+
+            <RadioButton
+                android:id="@+id/time3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/timeselector"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="12:00 PM - 02:00 PM" />
+
+            <RadioButton
+                android:id="@+id/time4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/timeselector"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="02:00 PM - 04:00 PM" />
+
+            <RadioButton
+                android:id="@+id/time5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20sp"
+                android:background="@drawable/timeselector"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="04:00 PM - 06:00 PM" />
+
+        </RadioGroup>
+
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/tvcontinue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colororange"
+        android:gravity="center"
+        android:text="Continue to Payment"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

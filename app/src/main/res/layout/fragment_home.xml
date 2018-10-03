@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".Fragments.main.ChatFragment">
+
+    <ImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/llnotifivation"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_notification" />
+
+        <TextView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/white_radius"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="02"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginTop="10dp"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/txtcompleteprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:text="Complete your profile"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsview"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scrollbars="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtcompleteprofile">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/pinkback"/>
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/blueback"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/utilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:text="Utilities"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hsview"/>
+
+            <LinearLayout
+                android:id="@+id/llfirstutility"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:layout_constraintTop_toBottomOf="@id/utilities"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llcourior"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivhome"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_home"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvhome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Couriour"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llorder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivorder"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_workout"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvorder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GLA"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llchat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivchat"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_chat"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvchat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medicine"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llfood"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivaccount"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_happy"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvaccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llsecondutility"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:layout_constraintTop_toBottomOf="@id/llfirstutility"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_home"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Netoyage"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_workout"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_chat"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Glamour"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_happy"
+                        android:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Courses"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/llsecondutility">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/quickrecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/quickrecycle"
+                    android:visibility="invisible"
+                    />
+            </LinearLayout>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
